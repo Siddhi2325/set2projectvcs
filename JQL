@@ -1,0 +1,8 @@
+a. Find issues where status changed from "To Do" to "In Progress" in the last 7 days:
+: status changed FROM "To Do" TO "In Progress" AFTER -7d
+
+b. List all issues assigned to you that are overdue:
+: assignee = currentUser() AND due <= now() AND resolution = Unresolved
+
+c. Show all tasks that transitioned to “Done” in the last 2 days:
+: status changed TO "Done" AFTER -2d AND issuetype = Task
